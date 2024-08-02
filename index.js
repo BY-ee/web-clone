@@ -8,7 +8,7 @@ let nextId = 0;    // 댓글이 등록될 때마다 데이터가 변경되므로
 app.use(express.json()); // 요청 본문에 포함된 JSON 데이터를 해석할 수 있도록 만들기
 app.use(express.urlencoded({ extended: true })); // form으로 입력받은 요청 데이터를 처리할 수 있도록 만들기
 
-app.set('views', path.join(__dirname)); // views 경로를 현재 경로로 설정
+// app.set('views', path.join(__dirname)); // views 경로를 현재 경로로 설정
 app.set('view engine', 'ejs'); // 템플릿 엔진으로 EJS 사용
 app.get('/', (req, res) => {   // '/' 경로로 접속하면 index.ejs 내용을 웹 브라우저에 표시
     res.render('index', { comments });
