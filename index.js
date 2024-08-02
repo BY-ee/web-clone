@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 5500;
 let comments = []; // 댓글 데이터가 담기는 배열을 comments 변수에 할당
 let nextId = 0;    // 댓글이 등록될 때마다 데이터가 변경되므로 변수 상자 let 사용
 
