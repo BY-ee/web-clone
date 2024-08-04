@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 페이지</title>
+</head>
+<body>
+    <h1>댓글 목록</h1>
+    <ul>
+    <% for (let i=0; i<comments.length; i++) { %> <!-- for 반복문으로 comments 배열 속 데이터를 웹페이지에 한 줄씩 표시 -->
+        <li><%= comments[i].content %></li>
+        <form action="/update/<%= i %>" method="post">
+            <input type="text" name="content">
+            <input type="submit" value="수정하기">
+        </form>
+        <!-- 게시글을 삭제하는 메소드로 "post" 사용 -->
+        <form action="/delete/<%= i %>" method="post">
+            <input type="submit" value="삭제하기">
+        </form>
+    <% } %>
+    </ul>
+    <hr>
+    <form action="/create" method="post">  <!-- 메소드를 "POST" 로 변경 -->
+        <input type="text" name="content">  <!-- type 속성은 데이터를 어떤 형태로 입력받을지 설정 -->
+        <input type="submit" value="Submit">  <!-- submit 속성은 입력된 정보를 서버에 전달하는 버튼 -->
+    </form>
+</body>
+</html>
