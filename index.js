@@ -22,14 +22,33 @@ app.post('/create', (req, res) => {   // '/create' 경로로 들어오는 POST �
 app.post('/update/:index', (req, res) => {
     const { index } = req.params;
     const { content } = req.body;
+
+    // 인덱스 유효성 검사
+    if (index < 0 || index >= comments.length) {
+        return res.status(400).send('Invalid index');
+    }
+
+    // 댓글 내용이 비어있는지 확인
+    if (!content) {
+        return res.status(400).send('Content cannot be empty');
+    }
+
     comments[index].content = content;
     res.redirect('/');
 });
+
 app.post('/delete/:index', (req, res) => {
     const index = req.params.index;
+
+    // 인덱스 유효성 검사
+    if (index < 0 || index >= comments.length) {
+        return res.status(400).send('Invalid index');
+    }
+
     comments.splice(index, 1);
     res.redirect('/');
 });
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
