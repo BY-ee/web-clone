@@ -10,7 +10,7 @@
     <ul>
     <% for (let i=0; i<comments.length; i++) { %> <!-- for 반복문으로 comments 배열 속 데이터를 웹페이지에 한 줄씩 표시 -->
         <li><%= comments[i].content %></li>
-        <form action="/update/<%= comments[i].id %>" method="post">
+        <form action="/update/<%= i %>" method="post">
             <input type="text" name="content">
             <input type="submit" value="수정하기">
         </form>
