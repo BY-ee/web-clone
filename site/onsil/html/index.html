@@ -86,6 +86,46 @@
             .br-20 {
                 border-radius: 20px;
             }
+
+            .card {
+                width: 30%;
+                border-radius: 10px;
+                box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);;
+            }
+
+            .card:hover {
+                box-shadow: 4px 12px 20px 6px rgba(0, 0, 0, 0.18);
+                transform: translateY(-5px);
+                transition: 0.3s ease;
+            }
+
+            .card-content {
+                margin-left: 20px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .card-tag {
+                margin-left: 20px;
+                margin-top: 20px;
+                font-size: 14px;
+            }
+
+            .card-image {
+                width: 100%;
+                margin-top: 25px;
+                border-radius: 0 0 10px 10px;
+            }
+
+            .card-box-text {
+                font-size: 12px;
+                line-height: 35px;
+                padding: 0 10px;
+            }
+
+            .box-shadow {
+                box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);
+            }
         </style>
     </head>
     <body style="width: 80%; margin: 0 10%">
@@ -117,48 +157,52 @@
         </div>
 
         <div class="flex-space-between padding-y-10">
-            <div class="w-30p br-10" style="box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);">
-                <div class="flex-space-between margin-20" style="height: 25px;">
+            <div class="card">
+                <div class="flex-space-between margin-20" style="height: 35px;">
                     <div class="flex">
                         <img src="../image/light.png" /> &nbsp;
-                        <div class="background-gray br-5" style="font-size: 12px; line-height: 25px; padding: 0 5px;">카카오톡</div>
+                        <div class="background-gray br-10 card-box-text">카카오톡</div>
                     </div>
                     <img class="w-25" src="../image/three-dots.png" />
                 </div>
-                <div>
+                <div class="card-content">
                     <div>말로하는 오픈채팅</div>
                     <div>보이스룸</div>
                 </div>
-                <div>#보이스룸#오픈채팅</div>
-                <img class="w-50" src="../image/content1.png" />
+                <div class="card-tag">#보이스룸#오픈채팅</div>
+                <img class="card-image" src="../image/content1.png" />
             </div>
 
-            <div class="w-30p br-10" style="box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);">
-                <div class="flex">
-                    <img src="../image/light.png" />
-                    <div>엔터테인먼트</div>
-                    <img src="../image/three-dots.png" />
+            <div class="card">
+                <div class="flex-space-between margin-20" style="height: 35px;">
+                    <div class="flex">
+                        <img src="../image/light.png" /> &nbsp;
+                        <div class="background-gray br-10 card-box-text">엔터테인먼트</div>
+                    </div>
+                    <img class="w-25" src="../image/three-dots.png" />
                 </div>
-                <div>
+                <div class="card-content">
                     <div>세상에 없던 세상,</div>
                     <div>카카오 웹툰</div>
                 </div>
-                <div>#엔터테인먼트#웹툰</div>
-                <img class="w-50" src="../image/content2.png" />
+                <div class="card-tag">#엔터테인먼트#웹툰</div>
+                <img class="card-image" src="../image/content2.png" />
             </div>
 
-            <div class="w-30p br-10" style="box-shadow: 4px 12px 30px 6px rgba(0,0,0,.09);">
-                <div class="flex">
-                    <img src="../image/light.png" />
-                    <div>커머스</div>
-                    <img src="../image/three-dots.png" />
+            <div class="card">
+                <div class="flex-space-between margin-20" style="height: 35px;">
+                    <div class="flex">
+                        <img src="../image/light.png" /> &nbsp;
+                        <div class="background-gray br-10 card-box-text">커머스</div>
+                    </div>
+                    <img class="w-25" src="../image/three-dots.png" />
                 </div>
-                <div>
+                <div class="card-content">
                     <div>나를 표현하는 쇼핑,</div>
                     <div>지그재그</div>
                 </div>
-                <div>#개인화추천#쇼핑#스타일</div>
-                <img class="w-50" src="../image/content3.jpg" />
+                <div class="card-tag">#개인화추천#쇼핑#스타일</div>
+                <img class="card-image" src="../image/content3.jpg" />
             </div>
         </div>
     </body>
